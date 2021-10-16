@@ -237,21 +237,27 @@ function Carousel({
 				</Swipe>
 			</div>
 			{thumbnails && (
-				<div className="thumbnails" id="thumbnail-div" style={{ maxWidth: width }}>
+				<div
+					className="thumbnails grid grid-cols-4 flex-wrap justify-center items-center"
+					id="thumbnail-div"
+					style={{ maxWidth: width }}
+				>
 					{data.map((item, index) => {
 						return (
-							<img
-								width={thumbnailWidth ? thumbnailWidth : '100px'}
-								src={item.image}
-								alt={item.caption}
-								className="thumbnail"
-								id={`thumbnail-${index}`}
-								key={index}
-								onClick={(e) => {
-									setSlide(index)
-									setChange(!change)
-								}}
-							/>
+							<div key={index} className="flex items-center justify-center">
+								<img
+									width={thumbnailWidth ? thumbnailWidth : '100px'}
+									src={item.image}
+									alt={item.caption}
+									className="thumbnail"
+									id={`thumbnail-${index}`}
+									key={index}
+									onClick={(e) => {
+										setSlide(index)
+										setChange(!change)
+									}}
+								/>
+							</div>
 						)
 					})}
 				</div>

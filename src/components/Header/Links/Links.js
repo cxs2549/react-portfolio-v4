@@ -2,10 +2,6 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 const StyledLinks = styled.nav`
 	background-color: #fff;
-	/* height: 60px; */
-	/* transform: translateY(10px); */
-	/* display: flex; */
-	/* align-items: center; */
 	a {
 		position: relative;
 		transition: transform 400ms;
@@ -35,7 +31,7 @@ const StyledLinks = styled.nav`
 			opacity: 1;
 		}
 		@media (min-width: 768px) {
-			font-size: 48px;
+			font-size: 58px;
 			transform: translateY(65px);
 		}
 		@media (min-width: 1280px) {
@@ -45,8 +41,8 @@ const StyledLinks = styled.nav`
 `
 const Links = ({ links }) => {
 	return (
-		<div className="max-w-4xl  mx-auto w-full">
-			<StyledLinks className="grid grid-cols-3 items-center justify-center w-full gap-8 max-w-4xl px-4 rounded-t mx-auto h-10">
+		<div className="max-w-4xl mx-auto  w-full">
+			<StyledLinks className="grid grid-cols-3 items-center justify-center w-full gap-8 max-w-4xl px-4 md:rounded-t mx-auto h-10">
 				{links.map((link, i) => (
 					<div key={i} className="flex items-center justify-center">
 						<NavLink to={i == 1 ? '/' : link} className="opacity-75">

@@ -1,16 +1,6 @@
 import styled from 'styled-components'
 import Carousel from '../Carousel/Carousel'
 
-import coke from '../../assets/projects/coke.png'
-import tubi from '../../assets/projects/tubi.png'
-import showtime from '../../assets/projects/showtime.png'
-import marriott from '../../assets/projects/marriott.png'
-import arbys from '../../assets/projects/arbys.png'
-import carvana from '../../assets/projects/carvana.png'
-import xbox from '../../assets/projects/xbox.png'
-import hbo from '../../assets/projects/hbo.png'
-import wb from '../../assets/projects/wb.png'
-
 const StyledSlideshow = styled.div`
 	display: flex;
 	flex-flow: column;
@@ -103,24 +93,14 @@ const StyledSlideshow = styled.div`
 	}
 `
 
-const Slideshow = () => {
-	const projectsDesktop = [
-		{ image: coke, url: 'https://cxs2549.github.io/react-coke/' },
-		{ image: tubi, url: 'https://cxs2549.github.io/react-tubi/' },
-		{ image: showtime, url: 'https://cxs2549.github.io/react-showtime/' },
-		{ image: marriott, url: 'https://cxs2549.github.io/react-marriott/' },
-		{ image: arbys, url: 'https://cxs2549.github.io/react-arbys/' },
-		{ image: carvana, url: 'https://cxs2549.github.io/react-carvana/' },
-		{ image: xbox, url: 'https://cxs2549.github.io/react-xbox/' },
-		{ image: hbo, url: 'https://cxs2549.github.io/react-hbo-max-v2/' },
-		// { image: wb, url: 'https://cxs2549.github.io/react-wb/' }
-	]
+const Slideshow = ({data}) => {
+
 
 	return (
 		<StyledSlideshow className="md:px-8">
 			<div id="slides">
 				<Carousel
-					data={projectsDesktop}
+					data={data}
 					time={4000}
 					width="800px"
 					height="350px"

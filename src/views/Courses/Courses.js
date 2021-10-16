@@ -1,23 +1,15 @@
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
 import { useState } from 'react'
-import reactImage from '../../assets/skills/react.png'
-import vueImage from '../../assets/skills/vue.png'
-import gitImage from '../../assets/skills/git.png'
-import cssImage from '../../assets/skills/css.png'
-import nodeImage from '../../assets/skills/nodejs.png'
-import expressImage from '../../assets/skills/express.png'
-import mongoImage from '../../assets/skills/mongo.png'
-import sassImage from '../../assets/skills/sass.png'
-import tailwindImage from '../../assets/skills/tailwind.png'
-import htmlImage from '../../assets/skills/html.png'
+import traversy from '../../assets/courses/traversy.png'
+import acade from '../../assets/courses/academind.png'
 
 const StyledCourses = styled.div`
-	height: calc(100vh - 80px);
-
+height: 100vh;
 	img {
 		transform: scale(.5);
 		max-width: 140px;
+		min-width: 140px;
 		min-height: 110px;
 		max-height: 110px;
 		object-fit: contain;
@@ -51,43 +43,56 @@ const StyledCourses = styled.div`
 		transition: opacity 2s;
 	}
 	#grid {
-		
 	}
 `
 const Courses = () => {
 	const [ inProp, setInProp ] = useState(true)
-	const Courses = [
-		reactImage,
-		vueImage,
-		gitImage,
-		cssImage,
-		nodeImage,
-		expressImage,
-		mongoImage,
-		sassImage,
-		tailwindImage,
-		htmlImage
+	const traversyCourses = [
+		{
+			img: traversy,
+			title: 'modern javaScript from the beginning',
+			desc: 'Learned and built projects with pure JavaScript (No frameworks or libraries)'
+		},
+		{
+			img: traversy,
+			title: 'React Front to back',
+			desc:
+				'Learned Modern React 16.8+ Including Hooks, Context API, Full Stack MERN & Redux By Building Real Life Projects',
+			link:
+				'https://www.udemy.com/course/modern-react-front-to-back/?referralCode=E43D257CE81EC8218FC9'
+		},
+		{
+			title: 'MERN Stack front to back',
+			img: traversy,
+			desc: 'Build and deploy a social network with Node.js, Express, React, Redux & MongoDB'
+		}
 	]
 
 	return (
-		<StyledCourses className="pt-20 md:pt-32  bg-gray-200">
-			<div className="max-w-3xl mx-auto  px-4 xl:px-0">
+		<StyledCourses className="pt-20 md:pt-32">
+			<div className="max-w-4xl mx-auto   px-4 xl:px-0">
 				<CSSTransition in={inProp} timeout={2000} appear classNames="slide">
-					<div className="  rounded-xl shadow bg-white">
-						<div
-							id="grid"
-							className="grid grid-cols-3 md:grid-cols-5 gap-4 items-center justify-center w-full "
-						>
-							{Courses.map((skill, i) => (
-								<div
-									id="item"
-									key={i}
-									className=" flex items-center justify-center"
-								>
-									<img src={skill} alt="" />
+					<div className="md:grid md:grid-cols-2 md:gap-x-4">
+						{traversyCourses.map((course, i) => (
+							<div
+								key={i}
+								className="h-40 rounded-xl mb-4 bg-white flex items-center p-4"
+							>
+								<img src={course.img} alt="" />
+								<div>
+									<h4 className="text-xs uppercase font-medium tracking-wider">
+										{course.title}
+									</h4>
+									<p className="text-sm opacity-75 mt-2 mb-1">{course.desc}</p>
+									<a
+										href={course.link}
+										className="text-blue-500 font-medium text-xs border-b border-blue-500 pb-0.5"
+									>
+										View on Udemy
+									</a>
 								</div>
-							))}
-						</div>
+							</div>
+						))}
 					</div>
 				</CSSTransition>
 			</div>

@@ -3,7 +3,7 @@ import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
 const StyledTitle = styled.div``
 const Title = () => {
 	return (
-		<StyledTitle className="flex gap-2 items-center">
+		<StyledTitle className="flex gap-2 items-center pr-4">
 			<div>
 				<div className="leading-5 md:leading-4">
 					<h4 className="tracking-wider md:text-lg">Cliff Sanchez</h4>
