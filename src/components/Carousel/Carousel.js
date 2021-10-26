@@ -2,11 +2,18 @@ import React, { useEffect, useState } from 'react'
 import Swipe from 'react-easy-swipe'
 import './index.css'
 import { AiOutlineGithub } from 'react-icons/ai'
+import styled from 'styled-components'
+
+const StyledCarousel = styled.div`
+	/* min-width: 690px; */
+	.carousel-container {
+		/* min-width: 100%; */
+	}
+`
 
 function Carousel({
 	data,
 	time,
-	url,
 	width,
 	height,
 	captionStyle,
@@ -107,7 +114,7 @@ function Carousel({
 	)
 
 	return (
-		<div style={style} className="box">
+		<StyledCarousel style={style} className="box  w-screen md:w-full">
 			<div
 				style={{
 					maxWidth: width ? width : '600px',
@@ -175,7 +182,7 @@ function Carousel({
 												objectFit: slideImageFit ? slideImageFit : 'cover'
 											}}
 										/>
-										<div className="absolute right-6 -bottom-5 h-4 hover:text-red-400">
+										<div className="absolute right-6 -bottom-7 h-6 flex items-center justify-center hover:text-red-400">
 											<a
 												href={item.github}
 												target="_blank"
@@ -270,7 +277,7 @@ function Carousel({
 					})}
 				</div>
 			)}
-		</div>
+		</StyledCarousel>
 	)
 }
 

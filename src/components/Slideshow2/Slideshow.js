@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 import Carousel from '../Carousel/Carousel'
 
+import coke from '../../assets/projects/coke.png'
+import tubi from '../../assets/projects/tubi.png'
+import showtime from '../../assets/projects/showtime.png'
+import marriott from '../../assets/projects/marriott.png'
+import arbys from '../../assets/projects/arbys.png'
+import carvana from '../../assets/projects/carvana.png'
+import xbox from '../../assets/projects/xbox.png'
+import hbo from '../../assets/projects/hbo.png'
+
 const StyledSlideshow = styled.div`
 	display: flex;
 	flex-flow: column;
@@ -12,7 +21,7 @@ const StyledSlideshow = styled.div`
 	z-index: 0;
 	border: none;
 	border-radius: 13px;
-	margin-top: 2rem;
+	/* margin-top: rem; */
 	@media (min-width: 640px) {
 		margin-top: 0;
 		grid-template-columns: 1fr 1fr;
@@ -28,9 +37,10 @@ const StyledSlideshow = styled.div`
 	#slides {
 		margin: 0 auto;
 		max-width: 100%;
+		/* border: 2px solid red; */
 	}
 	.box {
-		max-width: 100vw;
+		/* max-width: 100vw; */
 		.carousel-item {
 			padding: 0 1rem;
 			border-radius: 3px;
@@ -47,21 +57,15 @@ const StyledSlideshow = styled.div`
 			max-width: 900px !important;
 		}
 		#thumbnail-div {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			row-gap: 12px;
-			column-gap: 12px;
-			justify-content: space-between;
+			display: flex;
+			gap: 8px;
+			justify-content: center;
+			flex-wrap: wrap;
 			padding: 0 1rem;
-			padding-top: 1rem;
-			align-items: center;
-			margin-top: 1rem;
-			margin: 0 auto;
-			width: 90%;
+			margin-top: 2rem;
 			img {
 				border-radius: 3px;
 				cursor: pointer;
-				/* border: 1px solid lightgray; */
 			}
 			.thumbnail {
 				max-width: 50px;
@@ -93,13 +97,57 @@ const StyledSlideshow = styled.div`
 	}
 `
 
-const Slideshow = ({ data }) => {
+const Slideshow = () => {
+	const projectsDesktop = [
+		{
+			image: coke,
+			url: 'https://cxs2549.github.io/react-coke/',
+			github: 'https://github.com/cxs2549/react-coke'
+		},
+		{
+			image: tubi,
+			url: 'https://cxs2549.github.io/react-tubi/',
+			github: 'https://github.com/cxs2549/react-tubi'
+		},
+		{
+			image: showtime,
+			url: 'https://cxs2549.github.io/react-showtime/',
+			github: 'https://github.com/cxs2549/react-showtime'
+		},
+		{
+			image: marriott,
+			url: 'https://cxs2549.github.io/react-marriott/',
+			github: 'https://github.com/cxs2549/react-marriott'
+		},
+		{
+			image: arbys,
+			url: 'https://cxs2549.github.io/react-arbys/',
+			github: 'https://github.com/cxs2549/react-arbys'
+		},
+		{
+			image: carvana,
+			url: 'https://cxs2549.github.io/react-carvana/',
+			github: 'https://github.com/cxs2549/react-carvana'
+		},
+		{
+			image: xbox,
+			url: 'https://cxs2549.github.io/react-xbox/',
+			github: 'https://github.com/cxs2549/react-xbox'
+		},
+		{
+			image: hbo,
+			url: 'https://cxs2549.github.io/react-hbo-max-v2/',
+			github: 'https://github.com/cxs2549/react-hbo-max-v2'
+		},
+	]
+
 	return (
 		<StyledSlideshow className="md:px-8">
 			<div id="slides">
 				<Carousel
-					data={data}
+					data={projectsDesktop}
 					time={4000}
+					width="800px"
 					height="350px"
 					radius="10px"
 					captionPosition="bottom"

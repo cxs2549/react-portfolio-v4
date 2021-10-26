@@ -3,6 +3,7 @@
   vertical-align: middle;
   width: 100%;
   height: 100%;
+  max-width: 50%;
 }
 .carousel-container {
   position: relative;
@@ -142,13 +143,10 @@
   background-color: #042baa;
 }
 
-
-
 .thumbnails {
   display: flex;
   align-items: center;
   overflow: scroll;
-  margin-top: 20px !important;
 }
 .thumbnails::-webkit-scrollbar {
   display: none;

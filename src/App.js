@@ -1,11 +1,11 @@
 import { useRoutes } from 'react-router'
 import Header from './components/Header/Header'
 import Courses from './views/Courses/Courses'
-import Portfolio from './views/Portfolio/Portfolio'
+import Portfolio2 from './views/Portfolio2/Portfolio'
 import Skills from './views/Skills/Skills'
 
 const routes = [
-	{ path: '/', element: <Portfolio /> },
+	{ path: '/', element: <Portfolio2 /> },
 	{ path: '/skills', element: <Skills /> },
 	{ path: '/courses', element: <Courses /> }
 ]
@@ -15,7 +15,7 @@ const App = () => {
 	return (
 		<div className="bg-gray-200">
 			<Header />
-			<main className="overflow-hidden bg-gray-200">{element}</main>
+			<main className="overflow-hidden bg-gray-200 ">{element}</main>
 		</div>
 	)
 }
