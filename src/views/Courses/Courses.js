@@ -76,7 +76,7 @@ const Courses = () => {
 						{traversyCourses.map((course, i) => (
 							<div
 								key={i}
-								className="h-40 rounded-xl mb-4 bg-white flex items-center p-4"
+								className="rounded-xl mb-4 bg-white flex items-center p-4"
 							>
 								<img src={course.img} alt="" />
 								<div>

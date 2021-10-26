@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Swipe from 'react-easy-swipe'
 import './index.css'
+import { AiOutlineGithub } from 'react-icons/ai'
 
 function Carousel({
 	data,
 	time,
+	url,
 	width,
 	height,
 	captionStyle,
@@ -173,6 +175,18 @@ function Carousel({
 												objectFit: slideImageFit ? slideImageFit : 'cover'
 											}}
 										/>
+										<div className="absolute right-6 -bottom-5 h-4 hover:text-red-400">
+											<a
+												href={item.github}
+												target="_blank"
+												className="flex items-center justify-end gap-1"
+											>
+												<AiOutlineGithub />
+												<span className="whitespace-nowrap text-xs">
+													View on Github
+												</span>
+											</a>
+										</div>
 									</a>
 									{isPaused && (
 										<div
@@ -237,27 +251,21 @@ function Carousel({
 				</Swipe>
 			</div>
 			{thumbnails && (
-				<div
-					className="thumbnails grid grid-cols-4 flex-wrap justify-center items-center"
-					id="thumbnail-div"
-					style={{ maxWidth: width }}
-				>
+				<div className="thumbnails relative" id="thumbnail-div" style={{ maxWidth: width }}>
 					{data.map((item, index) => {
 						return (
-							<div key={index} className="flex items-center justify-center">
-								<img
-									width={thumbnailWidth ? thumbnailWidth : '100px'}
-									src={item.image}
-									alt={item.caption}
-									className="thumbnail"
-									id={`thumbnail-${index}`}
-									key={index}
-									onClick={(e) => {
-										setSlide(index)
-										setChange(!change)
-									}}
-								/>
-							</div>
+							<img
+								width={thumbnailWidth ? thumbnailWidth : '100px'}
+								src={item.image}
+								alt={item.caption}
+								className="thumbnail"
+								id={`thumbnail-${index}`}
+								key={index}
+								onClick={(e) => {
+									setSlide(index)
+									setChange(!change)
+								}}
+							/>
 						)
 					})}
 				</div>

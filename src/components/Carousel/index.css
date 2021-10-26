@@ -6,7 +6,6 @@
 }
 .carousel-container {
   position: relative;
-
   margin: auto;
 }
 
@@ -103,7 +102,9 @@
   transition: background-color 0.6s ease;
 }
 
-
+.active, .dot:hover {
+  background-color: #717171;
+}
 
 .fade {
   -webkit-animation-name: fade;
@@ -141,10 +142,13 @@
   background-color: #042baa;
 }
 
+
+
 .thumbnails {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
   overflow: scroll;
-  width: 100%;
+  margin-top: 20px !important;
 }
 .thumbnails::-webkit-scrollbar {
   display: none;
@@ -199,15 +203,3 @@
     bottom: 25px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .carousel-container {
-      min-width: 600px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .carousel-container {
-      min-width: 800px;
-  }
-}
-

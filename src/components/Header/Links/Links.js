@@ -27,6 +27,7 @@ const StyledLinks = styled.nav`
 		position: absolute;
 		font-weight: 700;
 		opacity: 1;
+		background-color: transparent;
 		&::after {
 			opacity: 1;
 		}

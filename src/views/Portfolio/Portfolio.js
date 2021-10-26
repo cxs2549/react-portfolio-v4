@@ -40,17 +40,49 @@ const StyledPortfolio = styled.div`
 const Portfolio = () => {
 	const [ inProp, setInProp ] = useState(true)
 	const projectsDesktop = [
-		{ image: coke, url: 'https://cxs2549.github.io/react-coke/' },
-		{ image: tubi, url: 'https://cxs2549.github.io/react-tubi/' },
-		{ image: showtime, url: 'https://cxs2549.github.io/react-showtime/' },
-		{ image: marriott, url: 'https://cxs2549.github.io/react-marriott/' },
-		{ image: arbys, url: 'https://cxs2549.github.io/react-arbys/' },
-		{ image: carvana, url: 'https://cxs2549.github.io/react-carvana/' },
-		{ image: xbox, url: 'https://cxs2549.github.io/react-xbox/' },
-		{ image: hbo, url: 'https://cxs2549.github.io/react-hbo-max-v2/' }
+		{
+			image: coke,
+			url: 'https://cxs2549.github.io/react-coke/',
+			github: 'https://github.com/cxs2549/react-coke'
+		},
+		{
+			image: tubi,
+			url: 'https://cxs2549.github.io/react-tubi/',
+			github: 'https://github.com/cxs2549/react-tubi'
+		},
+		{
+			image: showtime,
+			url: 'https://cxs2549.github.io/react-showtime/',
+			github: 'https://github.com/cxs2549/react-showtime'
+		},
+		{
+			image: marriott,
+			url: 'https://cxs2549.github.io/react-marriott/',
+			github: 'https://github.com/cxs2549/react-marriott'
+		},
+		{
+			image: arbys,
+			url: 'https://cxs2549.github.io/react-arbys/',
+			github: 'https://github.com/cxs2549/react-arbys'
+		},
+		{
+			image: carvana,
+			url: 'https://cxs2549.github.io/react-carvana/',
+			github: 'https://github.com/cxs2549/react-carvana'
+		},
+		{
+			image: xbox,
+			url: 'https://cxs2549.github.io/react-xbox/',
+			github: 'https://github.com/cxs2549/react-xbox'
+		},
+		{
+			image: hbo,
+			url: 'https://cxs2549.github.io/react-hbo-max-v2/',
+			github: 'https://github.com/cxs2549/react-hbo-max-v2'
+		},
 	]
 	return (
-		<StyledPortfolio className="mt-16 md:mt-32">
+		<StyledPortfolio className="mt-20 md:mt-32">
 			<CSSTransition appear in={inProp} timeout={2000} classNames="portfolio">
 				<Slideshow data={projectsDesktop} />
 			</CSSTransition>

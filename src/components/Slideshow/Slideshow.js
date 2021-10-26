@@ -93,9 +93,7 @@ const StyledSlideshow = styled.div`
 	}
 `
 
-const Slideshow = ({data}) => {
-
-
+const Slideshow = ({ data }) => {
 	return (
 		<StyledSlideshow className="md:px-8">
 			<div id="slides">
