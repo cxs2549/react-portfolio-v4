@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Carousel from '../Carousel/Carousel'
 
+import chevron from '../../assets/projects/chevron.png'
 import coke from '../../assets/projects/coke.png'
 import tubi from '../../assets/projects/tubi.png'
 import showtime from '../../assets/projects/showtime.png'
@@ -99,6 +100,11 @@ const StyledSlideshow = styled.div`
 
 const Slideshow = () => {
 	const projectsDesktop = [
+		{
+			image: chevron,
+			url: 'https://cxs2549.github.io/react-chevron/',
+			github: 'https://github.com/cxs2549/react-chevron'
+		},
 		{
 			image: coke,
 			url: 'https://cxs2549.github.io/react-coke/',

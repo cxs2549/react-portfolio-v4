@@ -153,6 +153,8 @@
 }
 .thumbnail {
   margin: 0 5px;
+  max-height: 50px;
+  object-fit: cover;
 }
 .active-thumbnail {
   border: #476ff1 solid 3px;

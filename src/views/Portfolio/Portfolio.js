@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import { CSSTransition } from 'react-transition-group'
 import { useState } from 'react'
+import chevron from '../../assets/projects/chevron.png'
 import coke from '../../assets/projects/coke.png'
 import tubi from '../../assets/projects/tubi.png'
 import showtime from '../../assets/projects/showtime.png'
@@ -40,6 +41,11 @@ const StyledPortfolio = styled.div`
 const Portfolio = () => {
 	const [ inProp, setInProp ] = useState(true)
 	const projectsDesktop = [
+		{
+			image: chevron,
+			url: 'https://cxs2549.github.io/react-chevron/',
+			github: 'https://github.com/cxs2549/react-chevron'
+		},
 		{
 			image: coke,
 			url: 'https://cxs2549.github.io/react-coke/',
