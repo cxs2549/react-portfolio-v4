@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Carousel from '../Carousel/Carousel'
 
+import newbalance from '../../assets/projects/new-balance.png'
 import chevron from '../../assets/projects/chevron.png'
 import coke from '../../assets/projects/coke.png'
 import tubi from '../../assets/projects/tubi.png'
@@ -101,6 +102,11 @@ const StyledSlideshow = styled.div`
 const Slideshow = () => {
 	const projectsDesktop = [
 		{
+			image: newbalance,
+			url: 'https://cxs2549.github.io/new-balance/',
+			github: 'https://github.com/cxs2549/new-balance'
+		},
+		{
 			image: chevron,
 			url: 'https://cxs2549.github.io/react-chevron/',
 			github: 'https://github.com/cxs2549/react-chevron'
@@ -144,7 +150,7 @@ const Slideshow = () => {
 			image: hbo,
 			url: 'https://cxs2549.github.io/react-hbo-max-v2/',
 			github: 'https://github.com/cxs2549/react-hbo-max-v2'
-		},
+		}
 	]
 
 	return (

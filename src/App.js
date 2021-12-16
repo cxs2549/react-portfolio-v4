@@ -13,7 +13,7 @@ const routes = [
 const App = () => {
 	const element = useRoutes(routes)
 	return (
-		<div className="bg-gray-200">
+		<div className="bg-gray-200 h-screen overflow-hidden">
 			<Header />
 			<main className="overflow-hidden bg-gray-200 ">{element}</main>
 		</div>
