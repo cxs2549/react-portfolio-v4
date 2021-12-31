@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Carousel from '../Carousel/Carousel'
 
+import dunkin from '../../assets/projects/dunkin.png'
 import newbalance from '../../assets/projects/new-balance.png'
 import chevron from '../../assets/projects/chevron.png'
 import coke from '../../assets/projects/coke.png'
@@ -101,6 +102,11 @@ const StyledSlideshow = styled.div`
 
 const Slideshow = () => {
 	const projectsDesktop = [
+		{
+			image: dunkin,
+			url: 'https://cxs2549.github.io/react-dunkin/',
+			github: 'https://github.com/cxs2549/react-dunkin'
+		},
 		{
 			image: newbalance,
 			url: 'https://cxs2549.github.io/new-balance/',
